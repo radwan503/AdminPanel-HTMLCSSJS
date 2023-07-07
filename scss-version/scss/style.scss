@@ -1,0 +1,7 @@
+@use "./variable" as *;
+
+//components
+@use "./components/sidenavbar.scss";
+@use "./components/topnavbar.scss";
+
+@use "./custom";

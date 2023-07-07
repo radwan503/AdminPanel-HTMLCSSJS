@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$font-family-inter: "Inter", sans-serif;
+//theme color
+$teal: #00aa61;
+$white: #fff;
+$body-bg-color: #0f0f0f;
+$green-100: #1b9c85;
+$black-deep: #1b1b1b;
+$black-400: #0d0d0d;
+$white-palceholder: rgba(255, 255, 255, 0.7);
+$white-rgba-600: rgba(255, 255, 255, 0.6);
+$white-rgba-500: rgba(255, 255, 255, 0.5);
+$white-rgba-200: rgba(255, 255, 255, 20%);
+$teal-rgba-100: rgba(0, 170, 97, 20%);
+$teal-rgba-500: 0.5px solid #00aa61;
+
+// navbar
+$navbar-light-toggler-border-color: $teal;
+
+$navbar-light-brand-color: $teal;
+$navbar-light-brand-hover-color: $teal;
+$navbar-toggler-focus-width: 0px;
+
+// Settings for the `<body>` element.
+$body-bg: $body-bg-color;
+
+// scss-docs-start border-radius-variables
+$btn-border-radius: 15px;
+$input-border-radius: 20px;
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "black": $black,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+) !default;
+// scss-docs-end colors-map
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 4.5 !default;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark: $black !default;
+$color-contrast-light: $white !default;
+
+// scss-docs-start theme-color-variables
+$primary: $teal !default;
+$secondary: $black-deep !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1146px,
+);
+
+$border-color: rgba(255, 255, 255, 0.4);
+
+// scss-docs-start btn-variables
+$btn-padding-y: 6px;
+$btn-padding-x: 25px;
+$btn-font-family: $font-family-inter;
+$btn-font-size: 16px;
+$btn-border-radius: $btn-border-radius;
+
+// scss-docs-start form-input-variabl
+$input-focus-border-color: $teal;
+$input-focus-color: $white;
+$input-color: $white;
+$input-placeholder-color: $white-palceholder;
+$input-font-family: $font-family-inter;
+$input-font-size: 16px;
+$input-font-weight: 100;
+$input-focus-box-shadow: 0px 0px 5px 2px rgba(0, 170, 97, 0.22);
+
+// card
+$card-bg: $black-deep;
+$card-color: $white;
+
+// tabs
+$nav-tabs-border-color: $teal;
+$nav-tabs-border-width: 100%;
+$nav-tabs-border-radius: 5px;
+$nav-tabs-link-hover-border-color: 1px solid #ddd;
+$nav-tabs-link-active-color: 1px solid $teal;
+$nav-tabs-link-active-bg: $teal;
+$nav-tabs-link-active-border-color: $teal;
+
+$nav-pills-border-radius: 10px;
+$nav-pills-link-active-color: $teal;
+$nav-pills-link-active-bg: $teal;
+
+//accordion
+$accordion-border-width: 0.2px;
+$accordion-border-color: $teal-rgba-100;
+
+$accordion-button-focus-border-color: none;
+$accordion-button-focus-box-shadow: 0;
+
+$accordion-button-active-bg: $body-bg-color;
+$accordion-button-active-color: $teal;
+$accordion-icon-width: 2.25rem;
+
+$horizontal-line-color: $white;
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' fill='#00AA61'><path fill-rule='evenodd' d='M39.1768 4.17678C39.2744 4.07915 39.2744 3.92085 39.1768 3.82322L37.5858 2.23223C37.4882 2.1346 37.3299 2.1346 37.2322 2.23223C37.1346 2.32986 37.1346 2.48816 37.2322 2.58579L38.6464 4L37.2322 5.41421C37.1346 5.51184 37.1346 5.67014 37.2322 5.76777C37.3299 5.8654 37.4882 5.8654 37.5858 5.76777L39.1768 4.17678ZM39 3.75H38.5125V4.25H39V3.75ZM37.5375 3.75L36.5625 3.75V4.25H37.5375V3.75ZM35.5875 3.75H34.6125V4.25L35.5875 4.25V3.75ZM33.6375 3.75H32.6625V4.25H33.6375V3.75ZM31.6875 3.75H30.7125V4.25H31.6875V3.75ZM29.7375 3.75H28.7625V4.25H29.7375V3.75ZM27.7875 3.75H26.8125V4.25H27.7875V3.75ZM25.8375 3.75H24.8625V4.25H25.8375V3.75ZM23.8875 3.75H22.9125V4.25H23.8875V3.75ZM21.9375 3.75H20.9625V4.25H21.9375V3.75ZM19.9875 3.75L19.0125 3.75V4.25H19.9875V3.75ZM18.0375 3.75H17.0625V4.25H18.0375V3.75ZM16.0875 3.75L15.1125 3.75V4.25H16.0875V3.75ZM14.1375 3.75H13.1625V4.25L14.1375 4.25V3.75ZM12.1875 3.75L11.2125 3.75V4.25H12.1875V3.75ZM10.2375 3.75H9.26249V4.25H10.2375V3.75ZM8.28749 3.75L7.31249 3.75V4.25H8.28749V3.75ZM6.33749 3.75H5.3625V4.25L6.33749 4.25V3.75ZM4.3875 3.75H3.4125V4.25H4.3875V3.75ZM2.4375 3.75H1.4625V4.25H2.4375V3.75ZM0.487503 3.75H0V4.25H0.487503V3.75ZM39.3536 4.35355C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464466C35.9763 0.269204 35.6597 0.269204 35.4645 0.464466C35.2692 0.659728 35.2692 0.976311 35.4645 1.17157L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53553C35.6597 7.7308 35.9763 7.7308 36.1716 7.53553L39.3536 4.35355ZM39 3.5H38.5125V4.5H39V3.5ZM37.5375 3.5L36.5625 3.5V4.5H37.5375V3.5ZM35.5875 3.5H34.6125V4.5L35.5875 4.5V3.5ZM33.6375 3.5H32.6625V4.5H33.6375V3.5ZM31.6875 3.5H30.7125V4.5H31.6875V3.5ZM29.7375 3.5L28.7625 3.5V4.5H29.7375V3.5ZM27.7875 3.5H26.8125V4.5H27.7875V3.5ZM25.8375 3.5H24.8625V4.5H25.8375V3.5ZM23.8875 3.5H22.9125V4.5H23.8875V3.5ZM21.9375 3.5H20.9625V4.5H21.9375V3.5ZM19.9875 3.5L19.0125 3.5V4.5H19.9875V3.5ZM18.0375 3.5H17.0625V4.5H18.0375V3.5ZM16.0875 3.5L15.1125 3.5V4.5H16.0875V3.5ZM14.1375 3.5H13.1625V4.5L14.1375 4.5V3.5ZM12.1875 3.5L11.2125 3.5V4.5H12.1875V3.5ZM10.2375 3.5H9.26249V4.5H10.2375V3.5ZM8.28749 3.5L7.31249 3.5V4.5H8.28749V3.5ZM6.33749 3.5H5.3625V4.5L6.33749 4.5V3.5ZM4.3875 3.5H3.4125V4.5H4.3875V3.5ZM2.4375 3.5H1.4625V4.5H2.4375V3.5ZM0.487503 3.5H0V4.5H0.487503V3.5Z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' fill='#00AA61'><path fill-rule='evenodd' d='M39.1768 4.17678C39.2744 4.07915 39.2744 3.92085 39.1768 3.82322L37.5858 2.23223C37.4882 2.1346 37.3299 2.1346 37.2322 2.23223C37.1346 2.32986 37.1346 2.48816 37.2322 2.58579L38.6464 4L37.2322 5.41421C37.1346 5.51184 37.1346 5.67014 37.2322 5.76777C37.3299 5.8654 37.4882 5.8654 37.5858 5.76777L39.1768 4.17678ZM39 3.75H38.5125V4.25H39V3.75ZM37.5375 3.75L36.5625 3.75V4.25H37.5375V3.75ZM35.5875 3.75H34.6125V4.25L35.5875 4.25V3.75ZM33.6375 3.75H32.6625V4.25H33.6375V3.75ZM31.6875 3.75H30.7125V4.25H31.6875V3.75ZM29.7375 3.75H28.7625V4.25H29.7375V3.75ZM27.7875 3.75H26.8125V4.25H27.7875V3.75ZM25.8375 3.75H24.8625V4.25H25.8375V3.75ZM23.8875 3.75H22.9125V4.25H23.8875V3.75ZM21.9375 3.75H20.9625V4.25H21.9375V3.75ZM19.9875 3.75L19.0125 3.75V4.25H19.9875V3.75ZM18.0375 3.75H17.0625V4.25H18.0375V3.75ZM16.0875 3.75L15.1125 3.75V4.25H16.0875V3.75ZM14.1375 3.75H13.1625V4.25L14.1375 4.25V3.75ZM12.1875 3.75L11.2125 3.75V4.25H12.1875V3.75ZM10.2375 3.75H9.26249V4.25H10.2375V3.75ZM8.28749 3.75L7.31249 3.75V4.25H8.28749V3.75ZM6.33749 3.75H5.3625V4.25L6.33749 4.25V3.75ZM4.3875 3.75H3.4125V4.25H4.3875V3.75ZM2.4375 3.75H1.4625V4.25H2.4375V3.75ZM0.487503 3.75H0V4.25H0.487503V3.75ZM39.3536 4.35355C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464466C35.9763 0.269204 35.6597 0.269204 35.4645 0.464466C35.2692 0.659728 35.2692 0.976311 35.4645 1.17157L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53553C35.6597 7.7308 35.9763 7.7308 36.1716 7.53553L39.3536 4.35355ZM39 3.5H38.5125V4.5H39V3.5ZM37.5375 3.5L36.5625 3.5V4.5H37.5375V3.5ZM35.5875 3.5H34.6125V4.5L35.5875 4.5V3.5ZM33.6375 3.5H32.6625V4.5H33.6375V3.5ZM31.6875 3.5H30.7125V4.5H31.6875V3.5ZM29.7375 3.5L28.7625 3.5V4.5H29.7375V3.5ZM27.7875 3.5H26.8125V4.5H27.7875V3.5ZM25.8375 3.5H24.8625V4.5H25.8375V3.5ZM23.8875 3.5H22.9125V4.5H23.8875V3.5ZM21.9375 3.5H20.9625V4.5H21.9375V3.5ZM19.9875 3.5L19.0125 3.5V4.5H19.9875V3.5ZM18.0375 3.5H17.0625V4.5H18.0375V3.5ZM16.0875 3.5L15.1125 3.5V4.5H16.0875V3.5ZM14.1375 3.5H13.1625V4.5L14.1375 4.5V3.5ZM12.1875 3.5L11.2125 3.5V4.5H12.1875V3.5ZM10.2375 3.5H9.26249V4.5H10.2375V3.5ZM8.28749 3.5L7.31249 3.5V4.5H8.28749V3.5ZM6.33749 3.5H5.3625V4.5L6.33749 4.5V3.5ZM4.3875 3.5H3.4125V4.5H4.3875V3.5ZM2.4375 3.5H1.4625V4.5H2.4375V3.5ZM0.487503 3.5H0V4.5H0.487503V3.5Z'/></svg>");
+
+//pagination
+
+$pagination-color: none;
+$pagination-bg: transparent;
+$pagination-border-width: 0px;
+$pagination-border-radius: 5px;
+$pagination-margin-start: 0px;
+$pagination-border-color: transparent;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

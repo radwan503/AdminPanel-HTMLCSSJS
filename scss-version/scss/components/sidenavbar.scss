@@ -1,0 +1,207 @@
+@use "../variable" as *;
+
+$color_1: #333;
+$color_2: #555555;
+$background-color_1: #eee;
+$background-color_2: #333;
+$background-color_3: #ffffff;
+$background-color_4: rgba(200, 200, 200, 0.2);
+$background-color_5: #eeeeee;
+$background-color_6: white;
+$background-color_7: rgba(0, 0, 0, 0.5);
+#sidebar {
+  position: fixed;
+  height: 100vh !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  width: 260px;
+  overflow: auto;
+  transition: all 0.3s;
+  background: $black-deep;
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+    background-color: $background-color_1;
+    display: none;
+  }
+  &::-webkit-scrollbar-thumbs {
+    width: 5px;
+    border-radius: 10px;
+    background-color: $background-color_2;
+    display: none;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      display: block;
+    }
+    &::-webkit-scrollbar-thumbs {
+      display: block;
+    }
+  }
+  .sidebar-header {
+    padding: 10px 15px;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid $body-bg;
+    height: 65px;
+  }
+  ul {
+    li {
+      padding: 2px 7px;
+      a {
+        color: $white-rgba-600;
+        &:hover {
+          color: $teal;
+          background-color: $background-color_4;
+        }
+        padding: 10px;
+        line-height: 30px;
+        border-radius: 5px;
+        font-size: 14px;
+        position: relative;
+        font-weight: 400;
+        display: block;
+        font-family: $font-family-inter;
+        span {
+          text-transform: capitalize;
+          display: inline-block;
+        }
+        i {
+          position: relative;
+          margin-right: 10px;
+          top: 5px;
+          color: $color_2;
+          margin-left: 10px;
+        }
+      }
+    }
+    li.active {
+      > a {
+        color: $teal;
+        background-color: $background-color_4;
+      }
+    }
+    li.drodown {
+      position: sticky;
+    }
+  }
+  ul.components {
+    padding: 20px 0;
+  }
+}
+.sidebar-header {
+  h3 {
+    color: $color_1;
+    font-size: 17px;
+    margin: 0px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    img {
+      width: 45px;
+      margin-right: 10px;
+    }
+  }
+}
+.dropdown-toggle {
+  &::after {
+    position: absolute;
+    right: 10px;
+    top: 23px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #sidebar.active {
+    width: 80px;
+    height: 100% !important;
+    position: absolute !important;
+    overflow: visible !important;
+    top: 0 !important;
+    z-index: 666;
+    float: left !important;
+    bottom: 0 !important;
+    .sidebar-header {
+      h3 {
+        span {
+          display: none;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    ul {
+      li {
+        a {
+          span {
+            display: none;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+    .dropdown-toggle {
+      &::after {
+        display: none;
+        transition: all 0.5s ease;
+      }
+    }
+    .menu {
+      position: absolute;
+      left: 81px;
+      background-color: $background-color_6;
+      width: 180px;
+      height: auto;
+      margin: 5px 0;
+      top: 0;
+      border: 1px solid #dcd9d9;
+      z-index: 4;
+    }
+  }
+  #content {
+    width: calc(100% - 260px);
+    position: relative;
+    float: right;
+    transition: all 0.3s;
+    background-color: $background-color_5;
+  }
+  #content.active {
+    width: calc(100% - 80px);
+  }
+  .dropdown-menu {
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    transform: translate3d(0, -20px, 0);
+    visibility: hidden;
+    transition: all 150ms linear;
+    display: block;
+    min-width: 15rem;
+    right: 0;
+    left: auto;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 260px;
+    transform: translatex(-100%);
+    transition: all 150ms linear;
+    box-shadow: none !important;
+  }
+  .body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+    transition: all 150ms linear;
+    background-color: $background-color_7;
+  }
+}

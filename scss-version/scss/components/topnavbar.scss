@@ -1,0 +1,121 @@
+@use "../variable" as *;
+
+$color_1: #ffffff;
+$color_2: #fff;
+$background-color_1: #2196f3;
+$background-color_2: transparent;
+$background-color_3: rgba(0, 0, 0, 0.09);
+$background-color_4: rgba(0, 0, 0, 0.08);
+
+.top-navbar {
+  width: 100%;
+  z-index: 9;
+  position: relative;
+
+  .navbar {
+    height: 63px;
+    background-color: $black-deep;
+    color: $color_1;
+    button {
+      background-color: $background-color_2;
+      border: none;
+      span {
+        color: $color_2;
+      }
+    }
+    .notification {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      display: block;
+      font-size: 9px;
+      border: 0px;
+      font-size: 10px;
+      background: #d9534f;
+      min-width: 15px;
+      text-align: center;
+      padding: 1px 5px;
+      height: 15px;
+      border-radius: 2px;
+      line-height: 14px;
+    }
+  }
+  .navbar-brand {
+    color: $color_1;
+  }
+  #sidebarCollapse {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 20px;
+    border: none;
+    color: $color_1;
+    background-color: $background-color_3;
+    span {
+      margin: 9px;
+      padding: 0px;
+    }
+  }
+  .navbar-nav {
+    > li.active {
+      color: $color_1;
+      border-radius: 4px;
+      background-color: $background-color_4;
+    }
+    > li {
+      > a {
+        color: $color_1;
+      }
+    }
+    > li.show {
+      .dropdown-menu {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    > .active {
+      > a {
+        &:focus {
+          color: $color_1;
+          background-color: $background-color_4;
+        }
+      }
+    }
+    li {
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 15px !important;
+      }
+    }
+  }
+  .dropdown-menu {
+    li {
+      > a {
+        font-size: 13px;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 2px;
+        font-weight: 400;
+        transition: all 150ms linear;
+      }
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .dropdown-menu {
+      border: 0;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+      transform: translate3d(0, -20px, 0);
+      visibility: hidden;
+      transition: all 150ms linear;
+      display: block;
+      min-width: 15rem;
+      right: 0;
+      left: auto;
+      opacity: 0;
+    }
+  }
+}
